@@ -1,0 +1,6 @@
+site: pena.rocks
+
+ESLint - Sintaxe - JavaScript
+Prettier - Identação
+Tabnine - Autocompletar HTML
+Quokka - Teste no meio do código (Função)
