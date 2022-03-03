@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="description" content="Exemplo teste" />
+  <meta name="author" content="Aula HTML"/>
+  <title>Site Web</title>
+  <style rel="text/css">
+    body {
+      background-color: silver;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-left: 10px;
+      margin-right: 10px;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+  <body>
+    <div class="container">
+    <h1 style="color: red; text-align: center">Salário Mínimo</h1>
+    <hr style="border:2px solid white">
+    </div>
+
+    <div align="center">
+    <img src="http://3.bp.blogspot.com/-M2FO31ZRiD0/Td7JJwbvtZI/AAAAAAAAAnc/JUfoMYVL8ZI/s1600/fake%2B72.jpg" 
+      alt="imagem fake">
+    </div>
+
+    <div align="center">
+    <a href="http://www.terminalroot.com.br/"
+      onclick="NovaJanela(this.href,'nomeJanela','820','560','yes');return false">
+      <p align="bottom" style="margin-right:15px">Abrir Pop-Up</p>
+    </a>
+
+    <a href="mailto:helenocardosofilho@gmail.com" style="margin-left:10px"><p align="left" style="padding:5px">Entre em contato</p></a>
+
+    </div>
+
+    <script>
+      var win = null;
+      function NovaJanela(pagina, nome, w, h, scroll) {
+        LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+        TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+        settings = 'location=no,toolbar=no,directories=no,status=no,height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',scrollbars=' + scroll + ',resizable';
+        win = window.open(pagina, nome, settings);
+      }
+    </script>
+   
+  </body>
+</html>
