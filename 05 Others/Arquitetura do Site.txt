@@ -1,0 +1,33 @@
+- Definir
+1. Google Search Console
+2. Google Analytics
+3. SiteMap.xml
+
+- Planejar uma arquitetura de site inclui considerar:
+1. Estruturas de URL
+2. Menus de navegação
+3. Categorização
+4. Navegação estruturada
+5. Links internos
+
+- Uma boa arquitetura do site deve:
+1. Agrupar conteúdo relacionado por tópicos
+2. Destacar as páginas mais importantes
+3. Manter o conteúdo simples e organizado em uma hierarquia lógica
+
+- A arquitetura do site é baseada no que é conhecido como topic cluster. 
+1. Defina seu objetivo
+2. Escolha a plataforma de criação de sites
+4. Defina o layout
+5. Se precisar, contrate um profissional
+6. Registre seu nome de domínio
+7. Prepare sua estratégia de conteúdo
+8. Adicione as páginas certas
+9. Coloque a usabilidade em primeiro lugar
+10. Prepare seu SEO - Search Engine Optimization
+11. Escolha ferramentas profissionais de marketing e gestão
+12. Torne seu site acessível para todos
+13. Interaja com seus visitantes
+14. Otimize seu site para dispositivos mobile
+15. Peça a opinião de outras pessoas
+16. Publique seu site
