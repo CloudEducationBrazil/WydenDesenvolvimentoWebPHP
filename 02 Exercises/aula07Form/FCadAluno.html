@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Alunos</title>
+  </head>
+  <body>
+    <form action="FCadAluno.php" method="get">
+      <div>
+        <label for="nome">
+          Nome
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            size="80"
+            maxlength="60"
+            required
+          />
+        </label>
+        <p></p>
+      </div>
+
+      <div>
+        <input type="hidden" name="pais" id="pais" value="Brasil" />
+      </div>
+
+      <div>
+        Sexo
+        <label for="sexo">
+          Masculino
+          <input
+            type="radio"
+            name="sexo"
+            id="sexo"
+            size="1"
+            maxlength="1"
+            value="M"
+          />
+          Feminino
+          <input
+            type="radio"
+            name="sexo"
+            id="sexo"
+            size="1"
+            maxlength="1"
+            value="F"
+          />
+        </label>
+        <p></p>
+      </div>
+
+      <div>
+        Data Nascimento
+        <label for="dtNasc">
+          <input type="date" name="dtNasc" id="dtNasc" />
+        </label>
+        <p></p>
+      </div>
+
+      <div>
+        Idade
+        <label for="idade">
+          <input type="number" name="idade" id="idade" />
+        </label>
+        <p></p>
+      </div>
+      <div>
+        Telefone
+        <label for="telefone">
+          <input type="tel" name="telefone" id="telefone" />
+        </label>
+        <p></p>
+      </div>
+
+      <div>
+        Forças Armadas
+        <label for="farmada">
+          <select name="farmada" id="farmada">
+            <option label="marinha" value="marinha"></option>
+            <option label="exército" value="exército"></option>
+            <option label="aero" value="aero"></option>
+          </select>
+        </label>
+        <p></p>
+      </div>
+
+      <div>
+        Fuma
+        <label for="fuma">
+          <input type="checkbox" name="fuma" id="fuma" size="1" maxlength="1" />
+        </label>
+        <p></p>
+      </div>
+
+      <div>
+        Observação
+        <label for="observacao">
+          <textarea name="observacao" id="observacao" rows="4" cols="50">
+          </textarea>
+        </label>
+      </div>
+      <p></p>
+
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Limpar" />
+    </form>
+  </body>
+</html>

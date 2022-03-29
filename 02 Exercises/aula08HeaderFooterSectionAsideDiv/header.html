@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tag Header Section Footer</title>
+    <style>
+      * {margin: 0}
+
+      header {
+        /* Caixa - Box */
+        display: block;
+
+        height: 100%;
+        width: 100%;
+
+        /* Borda */
+        border: solid 2px red;
+
+        /* Content */
+        background-color: teal;
+        font-size: 30px;
+        text-align: right;
+        color:chartreuse;
+
+        /* Margin - Margem Externa */
+        margin: 10px 20px 30px 10px; /* top right bottom left */
+
+        /* Padding - Margem Interna */
+        padding: 3px;
+      }
+
+      ul li {
+        display: inline-block;
+        padding: 2px 40px;
+        margin: 5px;  
+        list-style: none; /*  Bullets das opções */
+      }
+
+      ul li a {
+        color: gold;
+      }
+
+      nav a {
+        color: gold;
+      }
+
+      ul li a:hover {
+        color: brown;
+      }
+
+    .footer{
+        /* Caixa - Box */
+        display: block;
+
+        height: 100%;
+        width: 100%;
+
+        /* Borda */
+        border: solid 2px red;
+
+        /* Content */
+        background-color: teal;
+        color: red;
+        font-size: 30px;
+        text-align: right;
+
+        /* Margin - Margem Externa */
+        margin: 10px 20px 30px; /* top left bottom right */
+
+        /* Padding - Margem Interna */
+        padding: 3px;
+    }  
+
+    </style>
+  </head>
+  <body>
+    <header>
+     <nav> <!-- tag menu --> 
+      <a href=“URL pag. Web">Cadastros</a> |
+      <a href="URL pag. Web">Terminal de Vendas</a> |
+      <a href="URL pag. Web">Relatórios</a> |
+      <a href="URL pag. Web">Sobre</a>
+    </nav>
+    </header>
+
+    <header>
+      <ul>
+        <li><a href=“URL pag. Web">Home</a></li>
+        <li><a href=“URL pag. Web">Cursos</a></li>
+        <li><a href=“URL pag. Web">Sobre</a></li>
+      </ul>
+    </header>
+
+    <section>corpo</section>
+    <footer  class="footer">rodapé</footer>
+  </body>
+</html>

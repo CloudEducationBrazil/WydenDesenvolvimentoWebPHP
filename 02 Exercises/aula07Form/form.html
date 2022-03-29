@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Formulário com checkbox</h1>
+
+    <form action="/action_page.php" method="get">
+      <fieldset>
+        <input type="checkbox" name="veiculo1" value="Bicicleta" />
+        <label for="veiculo1"> Eu tenho uma bicicleta</label><br />
+        <input type="checkbox" name="veiculo2" value="Carro" />
+        <label for="veiculo2"> Eu tenho um carro</label><br />
+        <input type="checkbox" name="veiculo3" value="Barco" checked />
+        <label for="veiculo3"> Eu tenho um barco</label>
+      </fieldset>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p></p>
+
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+      0<input type="range" name="b" value="50" />100 +<input
+        type="number"
+        name="a"
+        value="10"
+      />
+      =
+      <output name="result"></output>
+    </form>
+  </body>
+</html>

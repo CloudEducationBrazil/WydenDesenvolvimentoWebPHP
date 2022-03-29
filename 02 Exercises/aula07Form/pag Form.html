@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Castrado de Aluno</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">Cadastro de Alunos</h1>
+    <a href="index.html">Voltar para Home Page</a>
+    <div class="container">
+      <div class="cadAluno">
+        <form class="formCadAluno" action="incluir">
+          Nome<input type="text" name="nome" id="nome" /><br />
+          Endereço<input type="text" name="end" id="end" /><br />
+          Telefone<input type="text" name="tel" id="tel" /><br />
+          Idade<input type="text" name="idade" id="idade" />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <script>
+      const nome = window.document.getElementById('nome');
+      nome.innerText = 'menu nome' + nome;
+    </script>
+  </body>
+</html>

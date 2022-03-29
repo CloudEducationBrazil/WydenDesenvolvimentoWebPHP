@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex, Grid, Block</title>
+  </head>
+  <style>
+    :root {
+      --padding: 10px 20px;
+
+      --space-xxs: 4px;
+      --space-xs: 8px;
+      --space-sm: 16px;
+      --space: 24px;
+      --space-md: 32px;
+      --space-lg: 48px;
+      --space-xlg: 64px;
+
+      --screen-xs: 360px;
+      --screen-sm: 768px;
+      --screen-md: 992px;
+      --screen-lg: 1280px;
+      --screen-xlg: 1440px;
+      --screen-xlgg: 5760px;
+    }
+
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: var(--screen-xlgg);
+      padding: var(--space);
+    }
+
+    body {
+      background-color: #f1f1f1;
+      color: #222;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .card-component {
+      /* Flexbox é unidimensional, ou seja, linha OU coluna, então é perfeito para o desenvolvimento interno de COMPONENTES. */
+      align-items: center;
+      display: flex;
+      padding: var(--padding);
+      margin-bottom: var(--space-md);
+    }
+
+    .grid-layout {
+      /*Grid é multidimensional, ou seja, linha e coluna, então é perfeito para o desenvolvimento de layout.*/
+      display: grid;
+
+      /*grid-template-columns: repeat(2, 1fr);*/
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card-image {
+      background-color: #fff;
+      box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      padding: 24px;
+    }
+
+    .card-text {
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="grid-layout">
+        <section class="card-component">
+          <img
+            class="card-image"
+            src="https://user-images.githubusercontent.com/3603793/103540600-bbe01900-4e78-11eb-9268-c05906c2e66c.png "
+            alt="imagem gato"
+          />
+
+          <div class="card-content">
+            <h1 class="card-title">Gata Jade Picon</h1>
+            <p class="card-text">
+              Jade Picon mandou indireta para Arthur Aguiar após polêmica com
+              Laís no 'BBB 22'? Jade Picon saiu há apenas duas semanas do "BBB
+              22" e já revelou em polêmica anterior com Larissa que não teve
+              tempo de assimilar tudo o que aconteceu no programa e depois dele.
+              Com a memória de sua participação ainda fresca, os fãs apontaram
+              que a influenciadora se referia ao fato de que Arthur Aguiar
+              passou a ser acusado de gaslighting no último Jogo da Discórdia.
+            </p>
+          </div>
+        </section>
+
+        <section class="card-component">
+          <img
+            class="card-image"
+            src="https://user-images.githubusercontent.com/3603793/103540716-f053d500-4e78-11eb-8762-fd35cd1b61bd.png"
+            alt="imagem gato 3"
+          />
+
+          <div class="card-content">
+            <h1 class="card-title">Gat 3 Jade Picon</h1>
+            <p class="card-text">
+              Jade Picon mandou indireta para Arthur Aguiar após polêmica com
+              Laís no 'BBB 22'? Jade Picon saiu há apenas duas semanas do "BBB
+              22" e já revelou em polêmica anterior com Larissa que não teve
+              tempo de assimilar tudo o que aconteceu no programa e depois dele.
+              Com a memória de sua participação ainda fresca, os fãs apontaram
+              que a influenciadora se referia ao fato de que Arthur Aguiar
+              passou a ser acusado de gaslighting no último Jogo da Discórdia.
+            </p>
+          </div>
+        </section>
+
+        <section class="card-component">
+          <img
+            class="card-image"
+            src="https://user-images.githubusercontent.com/3603793/103540600-bbe01900-4e78-11eb-9268-c05906c2e66c.png"
+            alt="imagem gato 2"
+          />
+
+          <div class="card-content">
+            <h1 class="card-title">Gata 2 Jade Picon</h1>
+            <p class="card-text">
+              Jade Picon mandou indireta para Arthur Aguiar após polêmica com
+              Laís no 'BBB 22'? Jade Picon saiu há apenas duas semanas do "BBB
+              22" e já revelou em polêmica anterior com Larissa que não teve
+              tempo de assimilar tudo o que aconteceu no programa e depois dele.
+              Com a memória de sua participação ainda fresca, os fãs apontaram
+              que a influenciadora se referia ao fato de que Arthur Aguiar
+              passou a ser acusado de gaslighting no último Jogo da Discórdia.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
