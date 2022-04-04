@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site - Flex Layout 1</title>
+    <style>
+      body,
+      ul,
+      li,
+      p {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 1.1rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header {
+        background-color: #1ca823;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .menu {
+        display: flex;
+      }
+
+      .menu li {
+        margin-left: 10px;
+      }
+
+      .menu li a {
+        display: block;
+        padding: 10px;
+        /*background:tomato;*/
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .flex_card {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .flex_card div {
+        flex: 1 1 200px; /* expandir shirink pixel tamanho mínimo*/
+        margin: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">Logo</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="/">Sobre</a></li>
+          <li><a href="/">Produtos</a></li>
+          <li><a href="/">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>Flexbox</h1>
+
+    <section class="flex_card">
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card1 Fake 300" />
+        <p>Texto Card1</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+        <p>Texto Card2</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card3 Fake 300" />
+        <p>Texto Card3</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card4 Fake 300" />
+        <p>Texto Card4</p>
+      </div>
+    </section>
+  </body>
+</html>

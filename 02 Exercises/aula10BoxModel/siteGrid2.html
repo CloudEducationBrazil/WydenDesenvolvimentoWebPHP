@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site - CSS Grid Layout 1</title>
+    <style>
+      body,
+      ul,
+      li,
+      p {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 1.1rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header {
+        background-color: #1ca823;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .menu {
+        display: flex;
+      }
+
+      .menu li {
+        margin-left: 10px;
+      }
+
+      .menu li a {
+        display: block;
+        padding: 10px;
+        /*background:tomato;*/
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .grid_card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0px;
+        /*grid-gap: 20px; foi descontinuado*/
+      }
+
+      .grid_card div {
+        margin-left: 20px;
+      }
+
+      .grid_card div:nth-child(n + 4) {
+        display: grid;
+        /*background: blue;*/
+        grid-template-columns: repeat(2, 1fr);
+        /*grid-gap: 10px; foi descontinuado
+        max-width: 200px;*/
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .grid_card div.anuncio {
+        display: block;
+        grid-column: 1;
+        grid-row: 2/5;
+        border-top: 10px solid tomato;
+        margin: 0 auto;
+      }
+
+      body {
+        margin-bottom: 100px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      @media (max-width: 600px) {
+        .grid_card {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .grid_card div:nth-child(n + 4) {
+          display: block;
+        }
+        .grid_card div.anuncio {
+          grid-column: auto;
+          grid-row: auto;
+          order: -1;
+        }
+      } ;
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">Logo</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="/">Sobre</a></li>
+          <li><a href="/">Produtos</a></li>
+          <li><a href="/">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>Grid Layout 2</h1>
+
+    <section class="grid_card">
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card1 Fake 300" />
+        <p>Texto Card1</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+        <p>Texto Card2</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card3 Fake 300" />
+        <p>Texto Card3</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card4 Fake 300" />
+        <p>Texto Card4</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card5 Fake 300" />
+        <p>Texto Card5</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card6 Fake 300" />
+        <p>Texto Card6</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card7 Fake 300" />
+        <p>Texto Card7</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card8 Fake 300" />
+        <p>Texto Card8</p>
+      </div>
+
+      <div>
+        <img src="https://fakeimg.pl/300/" alt="Card9 Fake 300" />
+        <p>Texto Card9</p>
+      </div>
+
+      <div class="anuncio">
+        <img src="https://fakeimg.pl/300/" alt="Card10 Fake 300" />
+        <p>Texto Anúncio</p>
+      </div>
+    </section>
+  </body>
+</html>

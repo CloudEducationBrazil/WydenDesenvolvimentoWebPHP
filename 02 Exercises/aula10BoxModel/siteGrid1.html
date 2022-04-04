@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site - Flex Layout 2</title>
+    <style>
+      body,
+      ul,
+      li,
+      p {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 1.1rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header {
+        background-color: #1ca823;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .menu {
+        display: flex;
+      }
+
+      .menu li {
+        margin-left: 10px;
+      }
+
+      .menu li a {
+        display: block;
+        padding: 10px;
+        /*background:tomato;*/
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      .video {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .sidebar div {
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      body {
+        margin-bottom: 100px;
+      }
+
+      @media (max-width: 600px) {
+        .grid-card {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          display: flex;
+          overflow: scroll;
+        }
+
+        .sidebar div {
+          flex: 1 0 200px;
+          margin: 0 10px;
+        }
+      } ;
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/">Logo</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="/">Sobre</a></li>
+          <li><a href="/">Produtos</a></li>
+          <li><a href="/">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>Grid Layout 1</h1>
+
+    <section class="grid-card">
+      <div class="video">
+        <img src="https://fakeimg.pl/300/" alt="Video Fake 300" />
+        <h2>Texto Video</h2>
+      </div>
+
+      <div class="sidebar">
+        <div>
+          <img src="https://fakeimg.pl/300/" alt="Card1 Fake 300" />
+          <p>Texto Sidebar1</p>
+        </div>
+
+        <div>
+          <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+          <p>Texto Sidebar2</p>
+        </div>
+
+        <div>
+          <img src="https://fakeimg.pl/300/" alt="Card3 Fake 300" />
+          <p>Texto Sidebar3</p>
+        </div>
+
+        <div>
+          <img src="https://fakeimg.pl/300/" alt="Card4 Fake 300" />
+          <p>Texto Sidebar4</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

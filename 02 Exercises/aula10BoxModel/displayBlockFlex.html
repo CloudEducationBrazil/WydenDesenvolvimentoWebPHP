@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste</title>
+    <style>
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        border: 1px solid #873;
+      }
+
+      .flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .item {
+        margin: 5px;
+        background: green;
+        text-align: center;
+        font-size: 1.2rem;
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Teste Display Block</h1>
+    <section class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </section>
+
+    <h1>Teste Display Flex</h1>
+    <section class="container flex">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </section>
+  </body>
+</html>
