@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet" />
+
+    <title>Site CIEL em construção!!!!</title>
+    <style>
+      li {
+        list-style: none;
+      }
+      .color-class {
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <table class="table table-danger table-striped">
+        <thead>
+          <tr class="table-primary">
+            <th>Curso</th>
+            <th>CH</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-dark">
+            <td>PHP</td>
+            <td>20h</td>
+            <td><button class="btn btn-primary">Detlahes</button></td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>30h</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form action="">
+        <input
+          type="file"
+          class="form-control"
+          aria-placeholder="Infome o arquivo"
+        />
+        <input type="color" class="form-control" />
+
+        <select
+          name="cidade"
+          id="cidade"
+          class="form-select form-select-lg"
+          style="width: 380px"
+        >
+          <option value="Salvador">Salvador</option>
+          <option selected value="Ceara">Ceara</option>
+          <option value="São Paulo">São Paulo</option>
+        </select>
+        <div class="form-check form-switch">
+          <input type="checkbox" name="sal" id="sal" class="form-check-input"
+          value"Salvador/>
+          <label for="Salvador" class="form-label">Salvador</label>
+        </div>
+      </form>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>
