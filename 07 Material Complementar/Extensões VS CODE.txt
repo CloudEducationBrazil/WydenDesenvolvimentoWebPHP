@@ -1,6 +1,8 @@
 site: pena.rocks
 
-ESLint - Sintaxe - JavaScript
+Live Server - Servidor Web
+ESLint - Sintaxe de código, ex.:JavaScript, HTML
 Prettier - Identação
-Tabnine - Autocompletar HTML
+Tabnine - Autocompletar código HTML
+IntelliSense - Autocompletar código HTML
 Quokka - Teste no meio do código (Função)

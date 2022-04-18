@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Hello, world!</title>
+
+    <style>
+      div.grid {
+        background: #ffd1c2;
+        border: 2px solid #f16234;
+        height: 50px;
+      }
+      .box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .one {
+        flex: 1;
+        border: 2px solid #f16234;
+      }
+
+      .two {
+        flex: 1;
+        border: 2px solid #f16234;
+      }
+
+      .three {
+        flex: 1;
+        border: 2px solid #f16234;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row grid">
+        <div class="col">One</div>
+        <div class="col">Two</div>
+        <div class="col">Three</div>
+      </div>
+    </div>
+    <!--intellisense do vs code; grid = recomendável até 12 cols na pags.-->
+    <div class="container">
+      <div class="row box grid">
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Three</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row box">
+        <div class="col-12 grid">.col-12</div>
+        <div class="col-sm-1 grid">.col-1</div>
+        <div class="col-md-5 grid">.col-5</div>
+        <div class="col-lg-4 grid">.col-4</div>
+        <div class="col-xl-2 grid">.col-2</div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row box">
+        <div class="col-sm-8 grid">col-sm-8</div>
+        <div class="col-sm-4 grid">col-sm-4</div>
+      </div>
+      <div class="row box">
+        <div class="col-sm grid">col-sm</div>
+        <div class="col-sm grid">col-sm</div>
+        <div class="col-sm grid">col-sm</div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper 
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>-->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!-- JQuery, Popper, Bootstrap
+    https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js
+    <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>  
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    -->
+    <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

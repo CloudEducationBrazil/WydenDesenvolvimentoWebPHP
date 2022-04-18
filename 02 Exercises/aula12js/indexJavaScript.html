@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Script</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="area0" class="block">
+      <p>Conteúdo 0</p>
+    </div>
+
+    <div class="container">
+      <div id="area1" class="block" onclick="clicar()">
+        <p>Conteúdo 1</p>
+      </div>
+
+      <div id="area2" class="block" onmousedown="mousedown()">
+        <p>Conteúdo 2</p>
+      </div>
+
+      <div id="area3" class="block" onmouseup="mouseup()">
+        <p>Conteúdo 3</p>
+      </div>
+
+      <div id="area4" class="block" onmousemove="mousemove()">
+        <p>Conteúdo 4</p>
+      </div>
+
+      <div id="area5" class="block" onmouseout="mouseout()">
+        <p>Conteúdo 5</p>
+      </div>
+
+      <div class="block">
+        <p>Conteúdo 6</p>
+      </div>
+    </div>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="pag1.html">Cadastro de Aluno</a>
+        </li>
+        <li><a href="pag2.html">Cadastro de Disciplina</a></li>
+      </ul>
+    </div>
+    <script>
+      var b = window.document.getElementById('area0');
+      b.addEventListener('click', clicar);
+      b.addEventListener('mousedown', mousedown);
+      b.addEventListener('mouseup', mouseup);
+      b.addEventListener('mousemove', mousemove);
+      b.addEventListener('mouseout', mouseout);
+
+      function clicar() {
+        var a = window.document.getElementById('area1');
+        a.innerText = 'Clicou';
+      }
+
+      function mousedown() {
+        var a = window.document.getElementById('area2');
+        a.innerText = 'Mouse down';
+      }
+
+      function mouseup() {
+        var a = window.document.getElementById('area3');
+        a.innerText = 'Mouse up';
+      }
+
+      function mousemove() {
+        var a = window.document.getElementById('area4');
+        a.innerText = 'Mouse move';
+      }
+
+      function mouseout() {
+        var a = window.document.getElementById('area5');
+        a.innerText = 'Mouse out';
+      }
+    </script>
+  </body>
+</html>
