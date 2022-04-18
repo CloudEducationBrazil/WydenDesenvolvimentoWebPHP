@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .box {
+        background: blue;
+        border: 1px solid #333;
+        padding: 30px;
+      }
+
+      .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3px;
+        /*grid-template-rows:1fr 3fr 1fr;
+           grid-auto-rows: minmax(200px, auto);*/
+
+        grid-template-areas:
+          'header header header'
+          'box1 box2 box3'
+          'box4 box5 box6'
+          'footer footer footer';
+
+        text-align: center;
+      }
+
+      .header {
+        grid-area: header;
+      }
+
+      .box1 {
+        grid-area: box1;
+      }
+
+      .box2 {
+        grid-area: box2;
+      }
+
+      .box3 {
+        grid-area: box3;
+      }
+
+      .box4 {
+        grid-area: box4;
+      }
+
+      .box5 {
+        grid-area: box5;
+      }
+
+      .box6 {
+        grid-area: box6;
+      }
+
+      .footer {
+        grid-area: footer;
+      }
+
+      /*grid-column: ;
+          grid-row: ;/*
+
+      /*   .header{
+           grid-column:1/4;
+         }
+
+         .box1{
+           grid-row:2/4;
+         }
+
+         .footer{
+           grid-column:1/4;
+         }*/
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box header">
+        <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+        <p>Header</p>
+      </div>
+
+      <div class="box box1">
+        <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+        <p>Box 1</p>
+      </div>
+
+      <div class="box box2">
+        <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+        <p>Box 2</p>
+      </div>
+
+      <div class="box box3">
+        <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+        <p>Box 3</p>
+      </div>
+
+      <div class="box box4">
+        <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+        <p>Box 4</p>
+      </div>
+
+      <div class="box box5">
+        <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+        <p>Box 5</p>
+      </div>
+
+      <div class="box box6">
+        <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+        <p>Box 6</p>
+      </div>
+
+      <div class="box footer">
+        <img src="https://fakeimg.pl/300/" alt="Card2 Fake 300" />
+        <p>Footer</p>
+      </div>
+    </div>
+  </body>
+</html>

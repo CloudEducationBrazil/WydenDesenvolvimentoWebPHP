@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #botao {
+        color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: green;
+      }
+
+      @keyframes exemplo {
+        0% {
+          background-color: red;
+        } /*a animação começa vermelho*/
+        50% {
+          background-color: yellow;
+        } /*a animação chega na metade em amarela*/
+        100% {
+          background-color: red;
+        } /*a animação termina vermelha novamente*/
+      }
+
+      div {
+        width: 100px; /*largura do elemento*/
+        height: 100px; /*altura do elemento*/
+        background-color: red; /*cor do inicial do elemento*/
+        animation-name: exemplo; /*aqui vem o nome da animação*/
+        animation-duration: 14s; /*tempo da duração do inicio ao fim*/
+        animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <a id="botao" href="https://google.com">Clique aqui</a>
+    <div>
+      <h1>Testando2</h1>
+    </div>
+  </body>
+</html>
