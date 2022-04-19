@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h6 id="resposta" name="resposta2">Confirmar</h6>
+
+    <script>
+      if (confirm('Você tem certeza?')) {
+        alert('Confirmado');
+        resposta = 'Sim';
+      } else {
+        alert('Cancelado');
+        resposta = 'Não';
+      }
+
+      //document.getElementById('resposta2').innerHTML = resposta;
+      document.querySelector('resposta2').innerHTML = resposta;
+    </script>
+  </body>
+</html>
