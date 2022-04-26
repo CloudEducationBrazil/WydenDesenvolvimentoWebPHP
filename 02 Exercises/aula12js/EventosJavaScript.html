@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body
+    onload="alert('Página terminou de carregar!!!')"
+    onresize="alert('Alterou o tamanho da página!!!')"
+  >
+    <!-- tag body   onmousedown="alert('DOWN - clicou na tela')"
+      onmouseup="alert('UP - clicou, segurou e soltou na tela')"
+    -->
+    <h1>Eventos JS</h1>
+    <p id="idTexto"></p>
+
+    <div
+      id="mouse"
+      onmouseover="corVerdeMouseOver()"
+      onmouseout="corAzulMouseOut()"
+      onmousemove="adicionaTextoMouseMove()"
+      onmousedown="corAzulMouseDown()"
+      onmouseup="corAzulMouseUp()"
+      style="margin: auto auto; width: 80%; height: 200px; background: green"
+    ></div>
+
+    <input
+      id="IdInput"
+      onfocus="onFocusLimpaTexto()"
+      onchange="onChangeAlteraTexto()"
+      onblur="eventoClick()"
+      onkeypress="onKeypressTeclaPressionada()"
+      onkeydown="onKeydownTeclaPressionadaSolta()"
+      onkeyup="onKeyupTeclaSolta()"
+      style="margin: 30px 130px; padding: 50px 280px; font-size: 20px"
+      type="text"
+      placeholder="Digite um texto"
+      value="Texto qualquer"
+    />
+
+    <button onclick="eventoClick()" ondblclick="eventoDblClick()">
+      Clique Duplo
+    </button>
+    <script>
+      function onKeypressTeclaPressionada() {
+        let input = document.getElementById('IdInput').value;
+        console.log(input);
+      }
+
+      function onKeydownTeclaPressionadaSolta() {
+        let input = document.getElementById('IdInput').value;
+        console.log(input);
+      }
+
+      function onKeyupTeclaSolta() {
+        let input = document.getElementById('IdInput').value;
+        console.log(input);
+      }
+
+      function eventoClick() {
+        //alert(“Acionou um evento de click”);
+        document.body.style.background = 'green';
+      }
+
+      function eventoDblClick() {
+        alert('Duplo click');
+      }
+
+      function onChangeAlteraTexto() {
+        console.log('Texto alterado');
+      }
+
+      function onFocusLimpaTexto() {
+        document.getElementById('IdInput').value = '';
+      }
+
+      function corVerdeMouseOver() {
+        let div = document.getElementById('mouse');
+        div.style.backgroundColor = 'green';
+      }
+
+      function corAzulMouseOut() {
+        let div = document.getElementById('mouse');
+        div.style.backgroundColor = 'blue';
+      }
+
+      function adicionaTextoMouseMove() {
+        let p = document.getElementById('idTexto');
+        p.append('Mouse Move');
+      }
+
+      let lista = ['maria', 20];
+
+      lista.shift();
+      lista.unshift('Meire');
+
+      console.log(lista);
+
+      const numeros = [30, 50, 22, 11, 44, 27];
+      const maior30 = numeros.filter(filtrarNum);
+
+      function filtrarNum(value) {
+        return value > 30;
+      }
+
+      console.log(maior30);
+
+      alert('ok');
+      window.alert('oi');
+      window.confirm('Sim/Não');
+      window.prompt('Informe um numero');
+    </script>
+  </body>
+</html>
