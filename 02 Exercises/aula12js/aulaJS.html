@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entendendo o Java Script</title>
+  </head>
+
+  <body>
+    <h6 id="idH6">Confirmar</h6>
+    <p class="classP">Texto HTML</p>
+
+    <p id="idResultado">Resultado</p>
+
+    <button onClick="ola()">Resultado</button>
+    <script>
+      if (confirm('Você tem certeza?')) {
+        alert('Confirmado');
+        resposta = 'Sim';
+      } else {
+        alert('Cancelado');
+        resposta = 'Não';
+      }
+
+      var lista = ['Heleno', 'Paulo', 'Rita', 'Carlos'];
+
+      for (var i in lista) {
+        document.writeln(lista[i]);
+      }
+
+      alert(90 + 3);
+
+      document.getElementById('idH6').innerHTML = 'Alterou H6';
+      document.querySelector('.classP').innerHTML = 'Alterou P';
+
+      let a = 7,
+        $b = 5,
+        c;
+      c = a ** 2;
+      document.write(c);
+
+      function soma(num1, num2) {
+        return num1 + num2;
+      }
+
+      function ola() {
+        alert('HelloWorld');
+      }
+
+      const carro = {
+        ano: 2001,
+        marca: 'volkswagem',
+        modelo: 'gol',
+        buzina: function () {
+          alert('Bibi');
+        },
+      };
+
+      console.log(carro);
+      carro.buzina();
+
+      var lista = ['Heleno', 'Paulo', 'Rita'];
+
+      for (var i in lista) {
+        console.log(lista[i]);
+      }
+    </script>
+  </body>
+</html>
