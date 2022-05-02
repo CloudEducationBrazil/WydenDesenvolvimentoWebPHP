@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eeeeee;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+header {
+  display: grid;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 70%;
+  /* border:1px solid red;*/
+  margin: auto auto;
+}
+
+input {
+  height: 60px;
+  font-size: 2rem;
+  width: 90%;
+  padding-left: 10%;
+}
+
+input.add {
+  width: 50%;
+  cursor: pointer;
+  background: green;
+  color: white;
+  font-weight: bold;
+  border: none;
+  height: 60px;
+}
+
+select {
+  width: 350px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 60%;
+  margin: auto auto;
+  /* border:1px solid blue;*/
+  padding-top: 40px;
+}
+
+.divResposta {
+  display: flex;
+  flex-flow: row wrap;
+  height: 50px;
+  width: 40%;
+  background-color: aqua;
+  border: 1px solid blue;
+  border-radius: 110px;
+  margin: auto 55px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.mdi {
+  color: green;
+}
+
+.mdi-check-circle {
+  color: green;
+}
+
+footer {
+  display: flex;
+  flex-flow: row-wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background: black;
+  height: 40px;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+}
+
+footer i {
+  color: red;
+  font-size: 22px;
+}
