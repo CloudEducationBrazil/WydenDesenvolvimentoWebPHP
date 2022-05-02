@@ -1,0 +1,26 @@
+body {
+    color: gray;
+    background-color: rgb(250, 250, 250);
+    font-family: Arial, Helvetica, sans-serif  ;
+    font-style:inherit;
+    
+}
+ul  {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none ;
+    align-items: center;
+    padding: 16px;
+}
+a   {
+    color: gray;
+    text-decoration: none;
+}
+header img {
+    width: 300px;    
+
+
+}
+.center {
+    text-align: center;
+}
