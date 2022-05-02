@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eeeeee;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: blue;
+}
+
+header {
+  display: grid;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 90%;
+  /* border:1px solid red;*/
+  margin: auto auto;
+}
+
+input {
+  height: 50px;
+  font-size: 2rem;
+  width: 80%;
+  padding-left: 10%;
+}
+
+button.add {
+  width: 20%;
+  cursor: pointer;
+  background: green;
+  color: white;
+  font-weight: bold;
+  border: none;
+  height: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#idDados,
+#idResposta {
+  display: flex;
+  flex-flow: row wrap;
+  width: 30%;
+  margin: auto auto;
+  /* border:1px solid blue;*/
+  padding-top: 40px;
+}
+
+.mdi-check-circle {
+  color: green;
+}
+
+footer {
+  display: flex;
+  flex-flow: row-wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background: black;
+  height: 40px;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+}
+
+footer i {
+  color: red;
+  font-size: 22px;
+}

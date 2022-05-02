@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="pt-BR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analisador de Números</title>
+    <link rel="stylesheet" href="analisadorNumero.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+    />
+  </head>
+  <body>
+      <header>
+        <h1>Analisador de Números</h1>
+      </header>
+
+    <main>
+      <div id="idDados">
+        Números (Entre 1 e 120):
+        <input type="number" name="inputNum" id="idInputNum" placeholder="Informe um número..." />
+        <input type="button" value="Adicionar" onclick="addNumero()"/>
+        <br><br>
+        
+        <select name="ListaNum" id="idListaNum" size="15"></select>
+        
+        <br><input type="button" value="Finalizar" onclick="FimNumero()" />
+      </div>
+
+      <div id="idResposta">Resultado..:</div>
+    </main>
+
+    <footer>
+      <i class="mdi mdi-circle"></i>&nbsp;&nbsp;
+      <a
+        href="#"_blank"
+        >Analisador Número Java Script</a
+      >
+    </footer>
+    <script src="analisadorNumero.js"></script>
+  </body>
+</html>

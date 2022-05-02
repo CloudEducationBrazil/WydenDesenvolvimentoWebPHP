@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="tabuada.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Tabuada de um Número</h1>
+    </header>
+
+    <main id="tabuada">
+      
+      <div>
+        <p>
+          Informe um Número Entre 1 e 200:
+          <input type="number" name="nameNum" id="idNum" 
+                 placeholder="Informe um número... " >
+          <input type="button" value="Gerar Tabuada" onclick="addTabuada()" 
+          id="btn-add" class="add">
+        </p>
+      </div>
+
+      <div class="divResposta" id="idResposta">
+        <select name="tabNum" id="tabNum" size="10">
+          <option>Número Informado</option>
+        </select>
+      </div>
+    </main>
+
+    <footer>
+      <i class="mdi mdi-circle"></i>&nbsp;&nbsp;
+      <a
+        href="#"_blank"
+        >Tabuada Java Script</a
+      >
+    </footer>
+    <script src="tabuada.js"></script>
+    <script src="teste.js"></script>
+  </body>
+</html>
