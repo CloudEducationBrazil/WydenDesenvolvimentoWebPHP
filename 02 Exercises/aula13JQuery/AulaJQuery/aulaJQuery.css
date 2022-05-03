@@ -1,17 +1,23 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: #eeeeee;
+  text-align: center;
+  margin-bottom: 80px;
 }
 
 h1 {
   text-align: center;
   font-size: 3rem;
+}
+
+.classH2 {
+  color: green;
 }
 
 header {
@@ -23,57 +29,14 @@ header {
   margin: auto auto;
 }
 
-input {
-  height: 60px;
-  font-size: 2rem;
-  width: 90%;
-  padding-left: 10%;
-}
-
-input.add {
-  width: 50%;
-  cursor: pointer;
-  background: green;
-  color: white;
-  font-weight: bold;
-  border: none;
-  height: 60px;
-}
-
-select {
-  width: 350px;
+button {
+  padding: 10%;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 60%;
+  display: inline-block;
   margin: auto auto;
-  /* border:1px solid blue;*/
-  padding-top: 40px;
-}
-
-.divResposta {
-  display: flex;
-  flex-flow: row wrap;
-  height: 50px;
-  width: 40%;
-  background-color: aqua;
-  border: 1px solid blue;
-  border-radius: 110px;
-  margin: auto 55px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
   justify-content: center;
-}
-
-.mdi {
-  color: green;
-}
-
-.mdi-check-circle {
-  color: green;
 }
 
 footer {
@@ -95,4 +58,33 @@ footer a {
 footer i {
   color: red;
   font-size: 22px;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-inline {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.red {
+  background: red;
+}
+
+.blue {
+  background: blue;
+}
+.green {
+  background: green;
+}
+
+#flip,
+#panel {
+  padding: 30px;
+  width: 900px;
+  height: 100px;
+  text-align: center;
 }

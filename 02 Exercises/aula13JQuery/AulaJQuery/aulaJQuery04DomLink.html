@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="pt-BR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula DOM Link JQuery</title>
+    <link rel="stylesheet" href="aulaJQuery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+    />
+  </head>
+  <body>
+      <header>
+        <h1>Aula DOM JQuery</h1>
+      </header>
+
+    <main>
+      <h2>DOM - Document Object Model</h2>
+      
+      <br>
+
+      <a id="link" href="https://google.com.br" target="_blank">Google</a>
+
+      <input type="button" value="Checar Link" name="inputButton" id="inputButton">
+    </main>
+
+    <footer>
+      <i class="mdi mdi-circle"></i>&nbsp;&nbsp;
+      <a
+        href="#"_blank"
+        >JQuery Java Script</a
+      >
+    </footer>
+    <!-- <script src="jquery-3.6.0.js"></script> -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#inputButton').click( function () {
+          let link = $('#link');
+          alert(link.attr('href'));
+        });
+      });
+    </script>
+
+    </body>
+</html>

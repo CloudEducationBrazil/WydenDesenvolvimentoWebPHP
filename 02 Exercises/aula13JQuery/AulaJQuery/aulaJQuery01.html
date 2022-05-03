@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="pt-BR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aulas JQuery</title>
+    <link rel="stylesheet" href="aulaJQuery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+    />
+  </head>
+  <body>
+      <header>
+        <h1>Aulas JQuery</h1>
+      </header>
+
+    <main>
+      <p id="teste2"></p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Minus similique ipsum, quis tenetur eaque sed! Omnis dolorum eum excepturi at quaerat? 
+        Maiores veniam amet porro neque saepe? Repellat, nulla ipsum?
+      </p>
+
+      <p id="teste">Curso JQuery.</p>
+      <p class="p-yellow">Curso Java Script!!!</p>
+
+      <br>
+      <hr>
+
+      <button id="idCliqueBotao">Clique aqui</button>
+      <p></p>
+    </main>
+
+    <footer>
+      <i class="mdi mdi-circle"></i>&nbsp;&nbsp;
+      <a
+        href="#"_blank"
+        >JQuery Java Script</a
+      >
+    </footer>
+    <!-- <script src="jquery-3.6.0.js"></script> -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#teste2").html("Alterou o parágrafo!!!");
+
+        $("#idCliqueBotao").click( function () {
+          alert("Clicou no botão!!!")
+        });
+      });
+    </script>
+
+    </body>
+</html>

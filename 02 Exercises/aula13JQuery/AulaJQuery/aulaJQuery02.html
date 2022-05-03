@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="pt-BR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aulas JQuery</title>
+    <link rel="stylesheet" href="aulaJQuery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+    />
+  </head>
+  <body>
+      <header>
+        <h1>Aulas JQuery</h1>
+      </header>
+
+    <main>
+      <div class="d-inline red"></div>
+      <div class="d-inline blue"></div>
+      <div class="d-inline green"></div>
+
+      <hr>
+
+      <button id="botaoHide">Ocultar Botão</button>
+      <button id="botaoShow">Mostrar Botão</button>
+    </main>
+
+    <footer>
+      <i class="mdi mdi-circle"></i>&nbsp;&nbsp;
+      <a
+        href="#"_blank"
+        >JQuery Java Script</a
+      >
+    </footer>
+    <!-- <script src="jquery-3.6.0.js"></script> -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#botaoHide").click( function () {
+          $('.blue').hide(2000, function() {
+            alert('Terminou o processo!!!');
+          }); // 'slow'; // 'fast' // evento: toggle:on/off; fadeOut(); fadeIn(); fadeToggle()
+        });
+
+        $("#botaoShow").click(function () {
+          $(".blue").show(3000);
+        });
+      });
+    </script>
+
+    </body>
+</html>
