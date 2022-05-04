@@ -96,3 +96,21 @@ footer i {
 .mdi-check-circle {
   color: green;
 }
+
+td,
+th {
+  border: 1px solid green;
+  text-align: center;
+  padding: 8px;
+  width: 420px;
+  height: 60px;
+}
+
+input {
+  margin-left: -53%;
+  margin-bottom: 1%;
+  margin-top: 3%;
+  padding: 8px;
+  height: 40px;
+  width: 600px;
+}

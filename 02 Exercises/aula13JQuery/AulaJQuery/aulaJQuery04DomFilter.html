@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="pt-BR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula Filter JQuery</title>
+    <link rel="stylesheet" href="aulaJQuery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+    />
+  </head>
+  <body>
+      <header>
+        <h1>Aula Filter JQuery</h1>
+      </header>
+
+    <main>
+      <input type="text" name="inputBuscar" id="inputBuscar" placeholder="Buscar no grid"><br><br>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>E-mail</th>
+          </tr>
+        </thead>
+
+        <tbody id="tabela">
+          <tr>
+            <td>Maria</td>
+            <td>Cristina</td>
+            <td>mcristina@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>Julia</td>
+            <td>Cardoso</td>
+            <td>juju@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>Josy</td>
+            <td>Sheila</td>
+            <td>maria@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>Julia</td>
+            <td>Robert</td>
+            <td>jrobert@gmail.com</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <br>
+    <br>
+    <input type="text" name="inputLista" id="inputLista" placeholder="Buscar na lista"><br><br>
+    <ul id="lista" name="lista" style="margin-left: 1%">
+      <li>arroz</li>
+      <li>farinha</li>
+      <li>carne</li>
+      <li>biscoito</li>
+      <li>manteiga</li>
+      <li>macarrão</li>
+    </ul>
+
+    </main>
+
+    <footer>
+      <i class="mdi mdi-circle"></i>&nbsp;&nbsp;
+      <a
+        href="#"_blank"
+        >JQuery Java Script</a
+      >
+    </footer>
+    <!-- <script src="jquery-3.6.0.js"></script> -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function () {
+          $('#inputBuscar').on('keyup', function () {
+              let valor = $(this).val().toLowerCase();
+
+              $('#tabela tr').filter(function(){
+                  $(this).toggle($(this).text().toLowerCase().indexOf(valor) > -1);
+              }); 
+          });
+
+         $('#inputLista').keyup(function () {
+           let valorLista = $(this).val().toLowerCase();
+
+           $('#lista li').filter(function () {
+             $(this).toggle($(this).text().toLowerCase().indexOf(valorLista) > -1);
+           });
+         });
+      });
+
+  (function readyJS(win, doc) {
+      function getRoot() {
+        return win.location.protocol + doc.location.hostname;
+      }
+     // alert('oiiii' + getRoot());
+    })(window, document);
+    
+    </script>
+
+    </body>
+</html>
