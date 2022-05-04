@@ -88,3 +88,11 @@ footer i {
   height: 100px;
   text-align: center;
 }
+
+.mdi {
+  color: green;
+}
+
+.mdi-check-circle {
+  color: green;
+}

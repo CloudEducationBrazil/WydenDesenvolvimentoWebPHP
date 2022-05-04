@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="pt-BR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula DOM AJAX JQuery</title>
+    <link rel="stylesheet" href="aulaJQuery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+    />
+  </head>
+  <body>
+      <header>
+        <h1>Aula DOM Setando JQuery</h1>
+      </header>
+
+    <main>
+      <h2>DOM - AJAX</h2>
+      <hr>
+      <div id="teste">
+        <p>Conteúdo</p>
+      </div>
+
+      <br>
+      <input type="button" value="Carregando Arquivo externo Local!!" name="inputButton" id="inputButton">
+      <br>
+      <input type="button" value="Carregando CEP Web!!" name="inputButton2" id="inputButton2">
+
+      <br>
+      <br>
+      <hr>
+      <input type="text" name="inputCEP" id="inputCEP" placeholder="Informe o CEP? "><br><br>
+      <input type="text" name="inputCidade" id="inputCidade"><br><br>
+      <input type="text" name="inputUF" id="inputUF"><br><br>
+      <input type="text" name="inputLogradouro" id="inputLogradouro"><br><br>
+      <input type="text" name="inputBairro" id="inputBairro"><br><br>
+    </main>
+
+    <footer>
+      <i class="mdi mdi-circle"></i>&nbsp;&nbsp;
+      <a
+        href="#"_blank"
+        >JQuery Java Script</a
+      >
+    </footer>
+    <!-- <script src="jquery-3.6.0.js"></script> -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function () {
+        
+        // Acesso para arquivo externo precisa de permissão, senão dar erro de Cors
+        $('#inputButton').click(function () { // poderia ser no h1 com o método mouseover
+          $('#teste').load('./teste.txt');
+        });
+        
+        // https://viacep.com.br/ws/40040470/json/
+        $('#inputButton2').click(function () { // poderia ser no método blur (sair do inputCEP)
+          let valorCEP = $('#inputCEP').val();
+
+          //get pegar dado (requisição)
+          $.get('https://viacep.com.br/ws/'+ valorCEP + '/json/', function (dadosCEP, status) {
+            //alert(status);
+            if ( status == 'success'){
+              $('#inputCidade').val(dadosCEP.localidade);
+              $('#inputUF').val(dadosCEP.uf);
+              $('#inputLogradouro').val(dadosCEP.logradouro);
+              $('#inputBairro').val(dadosCEP.bairro);
+            }
+            else {
+              alert('Erro na requisição!!!');
+            }
+          });
+
+          // método POST: enviar para outro site
+          // $.post(URL, {nome:"fulano de tal", idade:21}, function(dados, status)
+          //   { corpo da função });
+          
+          // método AJAX COMPLETO enviar para outro site
+          /*$.ajax({
+            url: 'URL',
+            type: 'GET ou POST',
+            success: function(dados, status){corpo da função},
+            error: function(){corpo da função}
+          }); */
+        });
+      });
+
+  (function readyJS(win, doc) {
+      function getRoot() {
+        return win.location.protocol + doc.location.hostname;
+      }
+      alert('oiiii' + getRoot());
+    })(window, document);
+    
+    </script>
+
+    </body>
+</html>

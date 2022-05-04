@@ -1,0 +1,6 @@
+<h2>Acessando dado externo (AJAX)</h2>
+<p>Dado de um arquivo externo</p>
+
+<script>
+  alert('Arquivo carregado externamente!!!');
+</script>  
