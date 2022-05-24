@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" name="idCEP" id="idCEP" />
+      <input type="button" value="Buscar" id="idInput" />
+      <pre id="idArea"></pre>
+    </div>
+    <p></p>
+
+    <script src="./jqueryu.js"></script>
+    <script>
+      $('#idInput').click(function () {
+        let inputCEP = $('#idCEP').val();
+
+        $.get(
+          'https://viacep.com.br/ws/' + inputCEP + '/json/',
+          function (objCEP, status) {
+            let lograd = objCEP.logradouro;
+            let bairro = objCEP.bairro;
+            let cidade = objCEP.localidade;
+            let uf = objCEP.uf;
+            $('#idArea').html(`${cidade}<br>${lograd}<br>${bairro}<br>${uf}`);
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

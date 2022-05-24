@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bbb;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+}
+
+#block2 {
+  background-color: green;
+  font-family: arial;
+  font-size: 20px;
+  height: 200px;
+  width: 280px;
+  margin: 20px;
+  text-align: center;
+}
+.block {
+  height: 200px;
+  width: 280px;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  margin: 20px;
+}
+
+.block:hover {
+  border: 2px solid red;
+}
+
+.menu {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* top left bottom, right */
+.cadAluno {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.formCadAluno {
+  display: flexbox;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px 10px 10px 10px;
+}

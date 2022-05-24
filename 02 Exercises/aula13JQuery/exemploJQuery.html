@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo JQuery</title>
+  </head>
+  <body>
+    <div style="background-color: blue; width: 300px; height: 300px" id="flip">
+      <div
+        style="background-color: green; width: 150px; height: 150px"
+        id="painel"
+        hidden
+      ></div>
+    </div>
+    <script src="./jqueryu.js"></script>
+    <script>
+      $('#flip').click(function () {
+        $('#painel').slideDown('slow'); // slideUp; slideToggle
+      });
+    </script>
+  </body>
+</html>
