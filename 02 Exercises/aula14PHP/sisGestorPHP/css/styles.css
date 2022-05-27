@@ -1,0 +1,29 @@
+/*
+    div: justify-content-center; form-group; 
+    div: alert alert-warning; alert alert-danger alert alert-success;
+    div: row
+    input: form-control
+    button/input: btn btn-primary; btn btn-info 
+  */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: brown;
+}
+
+.mensagem {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+}
+.menu {
+  text-align: right;
+}
