@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <?php require_once '\xampp\htdocs\html_css_js_php_CRUD\modulos\cadDepart\processCadDep.php'; ?>
+  <?php require_once '\xampp\htdocs\sisGestorPHP\modulos\cadDepart\processCadDep.php'; ?>
 
   <?php if (isset($_SESSION['message'])) { ?>
     <div class="mensagem alert alert-<?php echo $_SESSION['msg_type']; ?>">
