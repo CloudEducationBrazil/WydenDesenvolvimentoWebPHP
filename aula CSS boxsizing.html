@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing</title>
+    <style>
+        * {
+            box-sizing: border-box; /* para não ajustar na mão no block:hover*/
+        }
+
+        body {
+            background-color: #ccc;
+        }
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 960px;
+        }
+
+        .block{
+            /*box-sizing: border-box;  para não ajustar na mão no block:hover ou colocar geral * */
+            background-color: #fff;
+            width: 280px;
+            height: 200px;
+            font-size: 24px;
+            margin: 20px;
+        }
+
+        .block:hover{
+            border: 2px solid red;
+            /*width: 276px;*/
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class = "block">
+            oi
+        </div>
+        <div class = "block">
+            oi
+        </div>
+        <div class = "block">
+            oi
+        </div>
+        <div class = "block">
+            oi
+        </div>
+        <div class = "block">
+            oi
+        </div>
+        <div class = "block">
+            oi
+        </div>
+
+    </div>
+    
+</body>
+</html>
