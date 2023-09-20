@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box-Sizing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         * {
             box-sizing: border-box; /* para não ajustar na mão no block:hover*/
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            color: write;
         }
 
         body {
             background-color: #ccc;
         }
 
+        main {
+            height: 80vh;
+        }
+
+        section {
+            text-align: center;
+        }
+
         .container{
-            display: flex;
-            flex-wrap: wrap;
+            margin: auto;
+            display: grid;
+            flex-wrap: wrap; /*https://youtu.be/Y9uat94abxU*/
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            justify-content: center;
+            gap: 20px;
             max-width: 960px;
         }
 
@@ -30,32 +47,81 @@
 
         .block:hover{
             border: 2px solid red;
-            /*width: 276px;*/
+            /*width: 276px
+            ;*/
         }
+
+        header, footer{
+            height: 10vh;
+        }
+
+    a {
+        text-decoration: none;
+        color : white;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    header {
+        background: #1d1e20;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: aqua;
+    }
+
+    ul li {
+        padding: 20px;
+    }
+
     </style>
 </head>
 <body>
-    <div class = "container">
-        <div class = "block">
-            oi
-        </div>
-        <div class = "block">
-            oi
-        </div>
-        <div class = "block">
-            oi
-        </div>
-        <div class = "block">
-            oi
-        </div>
-        <div class = "block">
-            oi
-        </div>
-        <div class = "block">
-            oi
-        </div>
-
-    </div>
-    
+    <header class = "header">
+        <h1>logo foto aside</h1>
+        <nav class = "menu">
+            <ul>
+                <li>Sobre</li>
+                <li>Produto</li>
+                <li>Contato</li>
+            </ul>
+        </nav>   
+    </header>
+    <main>
+        <section>
+            <h1>Toollkjlkja</h1>
+            <div class = "container">
+                <div class = "block">
+                    oi
+                </div>
+                <div class = "block">
+                    oi
+                </div>
+                <div class = "block">
+                    oi
+                </div>
+                <div class = "block">
+                    oi
+                </div>
+                <div class = "block">
+                    oi
+                </div>
+                <div class = "block">
+                    oi
+                </div>
+            </div>
+        </section>   
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
 </body>
 </html>
