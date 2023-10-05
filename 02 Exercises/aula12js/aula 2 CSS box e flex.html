@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            color: white;
+        }
+        
+        body {
+            background-color: azure;
+        }
+
+        .card {
+            display: grid;
+            background-color: aqua;
+            height: 280px;
+            width: 280px;
+            text-align: center;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid red;
+            align-items: center;
+        }
+
+        .container {
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*repeat(3, 1fr);*/
+            flex-wrap: wrap;
+            gap : 10px;
+            max-width: 960px;
+            justify-content: center;
+        }
+
+        .header{
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu{
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+            margin: 10px;
+        }
+
+        .menu > ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .menu > ul li {
+            padding: 20px;
+            background-color: blue;
+        }
+   
+        a {
+            height: 40px;
+            width: 40px;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class = "header">
+        <a href="\">Logo</a>
+        <nav class = "menu">
+            <ul><li><a href="\">Cadastro</a></li></ul>
+            <ul><li><a href="\">Contato</a></li></ul>
+            <ul><li><a href="\">Sobre</a></li></ul>
+        </nav>
+    </header>
+    <section class = 'container'>
+        <div class = 'card'>
+            oi 1
+            <h1>teste</h1>
+        </div>
+        <div class = "card">
+            oi 2
+            <h1>ttt</h1>
+        </div>
+        <div class = "card">
+            oi 3
+        </div>
+        <div class = "card">
+            oi 4
+        </div>
+        <div class = "card">
+            oi 5
+        </div>
+        <div class = "card">
+            oi 6
+        </div>
+    </section>
+    <script>
+        alert("oi")
+        document.write(10+20)
+    </script>
+</body>
+</html>

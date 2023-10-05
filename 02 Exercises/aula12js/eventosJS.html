@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="idTexto"></p>
+    <div id="mouse"
+	onmouseover="corVerdeMouseOver()"	onmouseout="corAzulMouseOut()"       	onmousemove="adicionaTextoMouseMove()"
+	onmousedown="corAzulMouseDown()"  	onmouseup="corAzulMouseUp()"
+	style="margin: auto auto; width: 80%; height: 200px; background: green"></div>
+    
+    <input id="IdInput"
+    onfocus="onFocusLimpaTexto()" 	onchange="onChangeAlteraTexto()"       onblur="eventoClick()"
+    onkeypress="onKeypressTeclaPressionada()"
+    onkeydown="onKeydownTeclaPressionadaSolta()"
+    onkeyup="onKeyupTeclaSolta()" style="margin: 30px 130px; 	padding: 50px 280px; font-size: 20px"  type="text"
+    placeholder="Digite um texto" value="Texto qualquer"
+  />
+
+  <button onclick="eventoClick()" ondblclick="eventoDblClick()">
+    Clique Duplo
+</button>
+    <script>
+function onKeypressTeclaPressionada() {
+        let input = document.getElementById('IdInput').value;
+        console.log(input);
+      }
+
+function onKeydownTeclaPressionadaSolta() {
+        let input = document.getElementById('IdInput').value;
+        console.log(input);
+      }
+
+      function onKeyupTeclaSolta() {
+        let input = document.getElementById('IdInput').value;
+        console.log(input);
+      }
+
+function eventoClick() {
+        //alert("Acionou um evento de click");
+        document.body.style.background = 'green';
+      }
+      function eventoDblClick() {
+        alert('Duplo click');
+      }
+
+function onChangeAlteraTexto() {
+        console.log('Texto alterado');
+      }
+
+      function onFocusLimpaTexto() {
+        document.getElementById('IdInput').value = '';
+      }
+
+ function corVerdeMouseOver() {
+        let div = document.getElementById('mouse');
+        div.style.backgroundColor = 'green';
+      }
+
+      function corAzulMouseOut() {
+        let div = document.getElementById('mouse');
+        div.style.backgroundColor = 'blue';
+      }
+
+      function corAzulMouseUp() {
+        let div = document.getElementById('mouse');
+        div.style.backgroundColor = 'pink';
+      }
+
+      function corAzulMouseDown() {
+        let div = document.getElementById('mouse');
+        div.style.backgroundColor = 'yeollow';
+      }
+
+function adicionaTextoMouseMove() {
+        let p = document.getElementById('idTexto');
+        p.append('Mouse Move');
+      }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
