@@ -1,8 +1,8 @@
 <?php
 $hostname = "localhost";
-$database = "coursejdbc";
-$username = "developer";
-$password = "12";
+$database = "vendas";
+$username = "root";
+$password = "1234";
 
 // Create connection
 $conn = mysqli_connect($hostname, $username, $password, $database);

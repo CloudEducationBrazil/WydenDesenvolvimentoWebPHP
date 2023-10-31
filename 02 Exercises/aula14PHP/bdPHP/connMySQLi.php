@@ -1,8 +1,8 @@
 <?php
 $hostname = "localhost";
-$bancodedados = "coursejdbc";
-$usuario = "developer";
-$senha = "12";
+$bancodedados = "vendas";
+$usuario = "root";
+$senha = "1234";
 
 $mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
 $mysqli->set_charset('utf8');

@@ -3,29 +3,29 @@
 //include_once("connPDO.php");
 
 // Recebendo os dados a pesquisar
-// $idDepartamento = $_POST['idDepartamento'];
+// $idVendedor = $_POST['idVendedor'];
 ?>
 
 <html>
 
 <head>
   <link href="estilos.css" rel="stylesheet" type="text/css">
-  <title>Consulta de Departamento</title>
+  <title>Cadastrando Vendedor</title>
 </head>
 
 <body>
   <?php // Inserindo no BD
   try {
     // Conectando ao banco de dados:
-    include_once("connPDO.php");
+    include_once("../../bdPHP/connPDO.php");
 
-    //$sqlStatment = $conn->query("insert into department (NAME) values ('DepProva')");
-    $sqlStatment = "insert into department (NAME) values ('DepProva')";
+    //$sqlStatment = $conn->query("insert into tb_sellers (NAME) values ('Juju')");
+    $sqlStatment = "insert into tb_sellers (NAME) values ('Juju Cardoso')";
     if ($conn->query($sqlStatment)) {
-      echo ('Inserido com sucesso!!!');
+      echo ('Vendedor inserido com sucesso!!!');
     }
   } catch (PDOException $e) {
-    die("Erro no insert no BD");
+    die("Erro, cadastrando vendedor no BD");
   }
 
   // Fecha a conexão com o BD 

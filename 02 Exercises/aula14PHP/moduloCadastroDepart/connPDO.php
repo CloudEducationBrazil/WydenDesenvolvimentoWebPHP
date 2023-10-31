@@ -1,9 +1,9 @@
 <?php
 
-$bd   = "dbname=coursejdbc";
+$bd   = "dbname=vendas";
 $host = "mysql:host=localhost:3306" . $bd;
-$user = "developer";
-$pwd  = "12";
+$user = "root";
+$pwd  = "1234";
 
 try {
   $conn = new PDO($host, $user, $pwd);

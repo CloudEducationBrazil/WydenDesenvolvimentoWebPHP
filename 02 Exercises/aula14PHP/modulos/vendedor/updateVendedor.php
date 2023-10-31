@@ -1,31 +1,30 @@
 <?php
 // Conectando ao banco de dados:
-include_once("connPDO.php");
+include_once("../../bdPHP/connPDO.php");
 
 // Recebendo os dados a pesquisar
-// $idDepartamento = $_POST['idDepartamento'];
+// $idVendedor = $_POST['idVendedor'];
 ?>
 
 <html>
 
 <head>
   <link href="estilos.css" rel="stylesheet" type="text/css">
-  <title>Consulta de Departamento</title>
+  <title>Alterando Vendedor</title>
 </head>
 
 <body>
-  <?php // Inserindo no BD
+  <?php // Atualizando no BD
   try {
-    $sqlStatment = "delete from department where Id = :id";
+    $sqlStatment = "update tb_sellers set Name = 'Juju Alterado' where Id = :id";
     $stmt = $conn->prepare($sqlStatment);
-    $id = 56;
-    //$stmt->BindParam('id', $id, PDO::PARAM_INT);
+    $id = 225;
     $stmt->bindValue(':id', $id);
     if ($stmt->execute() === true) {
-      echo ('Excluído com sucesso!!!');
+      echo ('Vendedor alterado com sucesso!!!');
     }
   } catch (PDOException $e) {
-    die("Erro no delete no BD");
+    die("Erro na atualização do vendedor no BD");
   }
 
   // Fecha a conexão com o BD 

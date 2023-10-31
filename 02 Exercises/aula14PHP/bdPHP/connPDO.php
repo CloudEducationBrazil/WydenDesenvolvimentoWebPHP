@@ -1,8 +1,8 @@
 <?php
-$database = 'dbname=coursejdbc';
+$database = 'dbname=vendas';
 $hostname = 'mysql:host=localhost:3306;' . $database;
-$username = 'developer';
-$password = '12';
+$username = 'root';
+$password = '1234';
 //Hash the password as we do NOT want to store our passwords in plain text.
 //$passwordHash = password_hash($password, PASSWORD_BCRYPT, array(« cost » => 12));
 
@@ -17,3 +17,4 @@ try {
 } catch (PDOException $e) {
   die("Falha na Conexão com o BD MySQL!!!"); // . $e->getMessage()
 }
+  // echo "conectado com sucesso!!!";

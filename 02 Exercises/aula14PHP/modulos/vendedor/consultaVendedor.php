@@ -1,16 +1,18 @@
 <?php
 // Conectando ao banco de dados:
-include_once("connPDO.php");
+include_once("../../bdPHP/connPDO.php");
 
 // Recebendo os dados a pesquisar
-// $idDepartamento = $_POST['idDepartamento'];
+$idVendedor = $_GET['idVendedor'];
+
+echo $idVendedor;
 ?>
 
 <html>
 
 <head>
   <link href="estilos.css" rel="stylesheet" type="text/css">
-  <title>Consulta de Departamento</title>
+  <title>Consulta de Vendedor</title>
 </head>
 
 <body>
@@ -23,10 +25,19 @@ include_once("connPDO.php");
 
     <!-- Preenchendo a tabela com os dados do banco: -->
     <?php
-    $sqlStatment = $conn->query("select ID, NAME from department");
+
+    if ($idVendedor == null) {
+      $stmt = $conn->query("select ID, NAME from tb_sellers order by NAME");
+    }
+    else {
+      $sqlStatment = "select ID, NAME from tb_sellers where id = :idVendedor";
+      $stmt = $conn->prepare($sqlStatment);
+      $stmt->bindValue(':idVendedor', $idVendedor);
+      $stmt->execute();
+    }
 
     // Obtendo os dados por meio de um loop while
-    while ($registro = $sqlStatment->fetch(PDO::FETCH_ASSOC)) {
+    while ($registro = $stmt->fetch(PDO::FETCH_ASSOC)) {
       $id = $registro['ID'];
       $name = $registro['NAME'];
 
