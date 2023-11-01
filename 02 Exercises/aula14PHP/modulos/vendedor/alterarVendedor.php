@@ -3,23 +3,28 @@
 include_once("../../bdPHP/connPDO.php");
 
 // Recebendo os dados a pesquisar
-// $idVendedor = $_POST['idVendedor'];
+$idVendedor = $_POST['idVendedor'];
+$nameVendedor = $_POST['nameVendedor'];
+
+ //echo $idVendedor;
+ //echo $nameVendedor;
 ?>
 
 <html>
 
 <head>
   <link href="estilos.css" rel="stylesheet" type="text/css">
-  <title>Alterando Vendedor</title>
+  <title>Alterar Vendedor</title>
 </head>
 
 <body>
   <?php // Atualizando no BD
   try {
-    $sqlStatment = "update tb_sellers set Name = 'Juju Alterado' where Id = :id";
+    $sqlStatment = "update tb_sellers set Name = :nameVendedor where Id = :id";
     $stmt = $conn->prepare($sqlStatment);
-    $id = 225;
-    $stmt->bindValue(':id', $id);
+    //$id = 224;
+    $stmt->bindValue(':id', $idVendedor);
+    $stmt->bindValue(':nameVendedor', $nameVendedor);
     if ($stmt->execute() === true) {
       echo ('Vendedor alterado com sucesso!!!');
     }
@@ -30,6 +35,10 @@ include_once("../../bdPHP/connPDO.php");
   // Fecha a conexão com o BD 
   $conn = NULL;
   ?>
+  <div>
+      <a href=".\consultarVendedor.php">Voltar</a>
+  </div>
+
 </body>
 
 </html>

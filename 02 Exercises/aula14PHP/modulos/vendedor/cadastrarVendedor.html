@@ -1,0 +1,29 @@
+<?php
+// Conectando ao banco de dados:
+include_once("connPDO.php");
+
+// Recebendo os dados a pesquisar
+// $idVendedor = $_POST['idVendedor'];
+?>
+
+<html>
+
+<head>
+  <link href="estilos.css" rel="stylesheet" type="text/css">
+  <title>Cadastrar Vendedor</title>
+</head>
+
+<body>
+    <form method="POST" action="./cadastrarVendedor.php"">
+      <div>
+        <label for="nameVendedor">Nome Vendedor</label>
+        <input type="text" name= "nameVendedor" id= "nameVendedor" placeholder="Informe o nome do vendedor? " />
+      </div>
+
+      <div>
+        <input type="submit" value="Cadastrar" />
+      </div>
+    </form>
+</body>
+
+</html>
