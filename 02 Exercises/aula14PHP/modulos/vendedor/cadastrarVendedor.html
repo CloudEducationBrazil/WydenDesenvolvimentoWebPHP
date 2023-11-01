@@ -14,10 +14,14 @@ include_once("connPDO.php");
 </head>
 
 <body>
-    <form method="POST" action="./cadastrarVendedor.php"">
+  <div>
+    <a href=".\listarVendedor.php">Voltar</a>
+  </div>
+
+  <form method="POST" action="./cadastrarVendedor.php"">
       <div>
         <label for="nameVendedor">Nome Vendedor</label>
-        <input type="text" name= "nameVendedor" id= "nameVendedor" placeholder="Informe o nome do vendedor? " />
+        <input type="text" name= "nameVendedor" id= "nameVendedor" required placeholder="Informe o nome do vendedor? " />
       </div>
 
       <div>

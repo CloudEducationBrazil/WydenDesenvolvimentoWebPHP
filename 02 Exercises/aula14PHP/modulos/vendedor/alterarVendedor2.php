@@ -18,7 +18,7 @@ $nameVendedor = $_GET['nameVendedor'];
 </head>
 
 <body>
-    <a href=".\consultarVendedor.php">Voltar</a>
+    <a href=".\listarVendedor.php">Voltar</a>
     <form method="POST" action="./alterarVendedor.php?idVendedor=<?php echo $idVendedor?>">
     <div>
         <label for="idVendedor"></label>
@@ -29,7 +29,7 @@ $nameVendedor = $_GET['nameVendedor'];
       <div>
         <label for="nameVendedor">Nome Vendedor</label>
         <!-- value="< $_GET['cd-saida'];?>" -->
-        <input type="text" name= "nameVendedor" id= "nameVendedor" value= <?php echo $nameVendedor?> placeholder="Informe vendedor? " />
+        <input type="text" name= "nameVendedor" id= "nameVendedor" require value= <?php echo $nameVendedor?> placeholder="Informe vendedor? " />
       </div>
 
       <div>

@@ -7,7 +7,7 @@ include_once("../../bdPHP/connPDO.php");
 // Recebendo os dados a pesquisar
 $idVendedor = $_GET['idVendedor'];
 //$idVendedor = $_SESSION['idVendedor'];
-//echo $idVendedor;
+echo $idVendedor;
 ?>
 
 <html>
@@ -36,7 +36,7 @@ $idVendedor = $_GET['idVendedor'];
   $conn = NULL;
   ?>
   <div>
-    <a href=".\consultarVendedor.php">Voltar</a>
+    <a href=".\listarVendedor.php">Voltar</a>
   </div>
 
 </body>

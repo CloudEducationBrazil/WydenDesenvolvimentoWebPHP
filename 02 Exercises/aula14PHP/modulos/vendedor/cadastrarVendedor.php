@@ -41,7 +41,7 @@ $nameVendedor = $_POST['nameVendedor'];
       ?>
   </div>
   <div>
-      <a href=".\consultarVendedor.php">Voltar</a>
+      <a href=".\listarVendedor.php">Voltar</a>
   </div>
 
 </body>

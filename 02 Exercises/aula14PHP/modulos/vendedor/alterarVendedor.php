@@ -36,7 +36,7 @@ $nameVendedor = $_POST['nameVendedor'];
   $conn = NULL;
   ?>
   <div>
-      <a href=".\consultarVendedor.php">Voltar</a>
+      <a href=".\listarVendedor.php">Voltar</a>
   </div>
 
 </body>
