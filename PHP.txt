@@ -1,0 +1,19 @@
+    "intelephense.phpdoc.classTemplate": {
+
+        "summary": "$1",
+        "tags": [
+            "@package ${1:$SYMBOL_NAMESPACE}"
+        ]
+    },
+    "intelephense.files.associations": [
+        "*.php",
+        "*.phtml"
+    ], 
+   "php.validate.executablePath": "c:\\xampp\\php\\php.exe",
+    "php.suggest.basic": false,
+    "http.proxyAuthorization": null,
+    "workbench.colorTheme": "Visual Studio Dark - C++",
+    "C_Cpp.commentContinuationPatterns": [
+        "/**"
+    ],
+
