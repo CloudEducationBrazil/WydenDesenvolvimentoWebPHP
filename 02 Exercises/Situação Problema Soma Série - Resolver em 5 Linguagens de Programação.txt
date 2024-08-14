@@ -1,0 +1,152 @@
+** Situação Problema: Somar a série = (2 + 4 + 6 + ... + 40) / 30.
+** Resposta de todos os programas devem ser: 14
+
+** 0 -  Algoritmo Estruturado
+
+Inicio Algoritmo
+	    declare soma, n, resultado: numérico
+	    
+	    soma = 0
+	    n = 2
+	    enquanto (n <= 40) faça
+	        soma = soma + n
+	        n = n + 2
+	    fim enquanto
+
+	    resultado = soma / 30
+	    escreva ("Total: ", resultado)
+Fim Algoritmo
+
+******************************************
+**  1 - JAVA
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int soma, n, resultado;
+	    
+	    soma = 0;
+	    n = 2;
+	    while (n <= 40) {
+	        soma = soma + n;
+	        n = n + 2;
+	    }
+
+	    resultado = soma / 30;
+ 	    System.out.println("Total: " + resultado);
+	}
+}
+
+********************************************
+** 2 - C#
+
+using System;
+class Soma {
+  static void Main() {
+    int soma, n, resultado;
+    
+    soma = 0;
+    n = 2;
+    while (n <= 40) {
+        soma = soma + n;
+        n = n + 2;
+    }
+
+    resultado = soma / 30;
+    Console.WriteLine("Total: " + resultado);;
+  }
+}
+
+****************************************************
+** 3 - Python
+
+soma = 0
+n = 2
+while (n <= 40):
+    soma = soma + n
+    n = n + 2
+
+resultado = soma / 30
+print ("Total: ", resultado)
+
+***************************************************
+** 4 - PHP
+
+<?php
+
+$soma = 0;
+$n = 2;
+while ($n <= 40) {
+    $soma = $soma + $n;
+    $n = $n + 2;
+}
+
+$resultado = $soma / 30;
+echo "Total: ". $resultado;
+
+?>
+
+*****************************************************
+** 5 - JS Java Script
+
+soma = 0
+n = 2
+while (n <= 40) {
+    soma = soma + n
+    n = n + 2
+}
+
+resultado = soma / 30
+print("Total: " + resultado)
+
+*****************************************************
+** 6 - Pascal
+
+program Somar;
+var soma, n : integer;
+    resultado : real;
+
+begin
+  soma := 0;
+  n := 2;
+  while (n <= 40) do
+  begin
+    soma := soma + n;
+    n := n + 2;
+  end;
+    
+  resultado := soma / 30;
+  writeln ('Total: ', resultado :0:2);
+end.
+
+**************************************
+** 7 - COBOL
+
+      * iniciar programa depois da coluna 8; comentário na coluna 7
+      * na estrutura de repetição PERFORM UNTIL, repete até que a condição se torne verdadeira, 
+      * ou seja, o loop se encerra quando a condição é verdadeira
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. somar.
+        
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  soma         PIC 9(4).
+       01  n            PIC 9(4).
+       01  resultado    PIC 9(4).
+        
+       PROCEDURE DIVISION.
+            ADD 0 TO soma
+            ADD 2 TO n
+
+            PERFORM UNTIL (n > 40)
+                ADD n TO soma
+                ADD 2 TO n        
+            END-PERFORM
+
+            DIVIDE soma BY 30 GIVING resultado
+            DISPLAY "Total: " resultado
+            
+            STOP RUN.
