@@ -1,0 +1,47 @@
+8. Ruby
+
+soma = 0;
+n = 2;
+    
+while (n <= 40) do 
+   soma = soma + n;
+   n = n + 2;
+end
+    
+resultado = soma / 30;
+puts "Total: #{resultado}";
+
+9. Kotlin - Google Andriod
+
+fun main() {
+    var soma = 0;
+    var n = 2;
+    
+    while (n <= 40) {
+       soma = soma + n;
+        n = n + 2;
+    }
+    
+    var resultado = soma / 30;
+    println("Total:" + resultado);
+}
+
+10. C
+
+#include <stdio.h>
+
+int main() { 
+  int soma = 0;
+  int n = 2;
+  int resultado;
+    
+  while (n <= 40) { 
+     soma = soma + n;
+     n = n + 2;
+  }
+    
+  resultado = soma / 30; 
+  printf("Total %d", resultado);
+  
+  return 0;
+}
