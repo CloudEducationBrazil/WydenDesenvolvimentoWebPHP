@@ -1,0 +1,8 @@
+vscode for web - versão preview
+https://vscode.dev/?vscode-lang=pt-br
+
+ctrl+shift +p
+
+extensão html preview
+
+
