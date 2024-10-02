@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de Display Flex - BoxModel</title>
-    <!-- display:grid https://youtu.be/Y9uat94abxU -->
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -20,17 +19,18 @@
         }
 
         .container {
-            margin: auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-auto-rows: minmax(288px, auto);
             flex-wrap: wrap;
             max-width: 960px;
             justify-content: center; /* horizontal */
             align-items: center; /* vertical */
-            padding: 10px;
         }
 
         .card {
+            max-width: 280px;
+            min-width: 200px;
             width: 280px;
             height: 200px;
             background-color: blueviolet;
@@ -44,7 +44,17 @@
             border: 2px solid red;
             width: 276px;
        }
-       
+       @media(max-width:500px){
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: minmax(288px, auto);
+            flex-wrap: wrap;
+            justify-content: center; /* horizontal */
+            align-items: center; /* vertical */
+        }
+
+       }
     </style>
 </head>
 <body>
