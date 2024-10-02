@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Display Flex - BoxModel</title>
+
+    <style>
+         * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+         }
+
+        body {
+            background-color: aqua;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 960px;
+            justify-content: center; /* horizontal */
+            align-items: center; /* vertical */
+        }
+
+        .card {
+            width: 280px;
+            height: 200px;
+            background-color: blueviolet;
+            margin: 20px;
+            font-size: 24px;
+            align-content: center; /* conteúdo */
+            text-align: center;
+        }
+
+        .card:hover {
+            border: 2px solid red;
+            width: 276px;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <p>Oi 1</p>
+        </div>
+
+        <div class="card">
+            <p>Oi 2</p>
+        </div>
+
+        <div class="card">
+            <p>Oi 3</p>
+        </div>
+
+        <div class="card">
+            <p>Oi 4</p>
+        </div>
+
+        <div class="card">
+            <p>Oi 5</p>
+        </div>
+
+        <div class="card">
+            <p>Oi 6</p>
+        </div>
+        <img src="https://picsum.photos/id/237/200/300" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de Display Flex - BoxModel</title>
+    <style>
+         * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0; 
+         }
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 960px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .card {
+            width: 280px;
+            height: 200px;
+            background-color: blue;
+            margin: 20px;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            align-content: center;
+        }
+
+        .card:hover {
+            background-color: aqua;
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="card">
+            oi
+        </div>
+
+        <div class="card">
+            oi
+        </div>
+
+        <div class="card">
+            oi
+        </div>
+
+        <div class="card">
+            oi
+        </div>
+
+        <div class="card">
+            oi
+        </div>
+
+        <div class="card">
+            oi
+        </div>
+    </div>
+</body>
+</html>
