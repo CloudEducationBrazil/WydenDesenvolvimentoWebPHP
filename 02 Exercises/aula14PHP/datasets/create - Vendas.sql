@@ -1,4 +1,6 @@
-use vendas; 
+create databse vendas2;
+
+use vendas2; 
 
 SET autocommit=0;
 
@@ -10,6 +12,13 @@ start transaction;
 
 create table tb_sales (id BIGINT not null AUTO_INCREMENT, amount float8, date date, deals int4, visited int4, seller_id int8, primary key (id));
 create table tb_sellers (id BIGINT not null AUTO_INCREMENT, name varchar(255), primary key (id));
+create table department (id BIGINT not null AUTO_INCREMENT, name varchar(255), primary key (id));
+
+INSERT INTO department(name) VALUES ('RH');
+INSERT INTO department(name) VALUES ('TI');
+INSERT INTO department(name) VALUES ('Comercial');
+INSERT INTO department(name) VALUES ('Desenvolvimento');
+INSERT INTO department(name) VALUES ('Financeiro');
 
 # alter table tb_sales add constraint FKSales_Sellers foreign key (seller_id) references tb_sellers;
  alter table tb_sales add constraint fkSalesSellers foreign key (seller_id) references tb_sellers(id);
