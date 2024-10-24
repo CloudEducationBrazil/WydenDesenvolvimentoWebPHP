@@ -17,7 +17,7 @@ try {
     $id = $_POST['idDepart'];
     $department = $_POST['department'];
 
-    $sqlStatment = "insert into coursejdbc.department (name) values ('$department')";
+    $sqlStatment = "insert into vendas.department (name) values ('$department')";
     if ($conn->query($sqlStatment)) {
       //echo "<br> Registro inserido...";
 
@@ -35,25 +35,41 @@ try {
 
 // Update
 try {
-  if (isset($_GET['update'])) {
-    $id = $_GET['update'];
+  if (isset($_GET['update'])) {  
+    $id = $_GET['idDepart'];
+    echo "aaaa $id";
 
-    //$sqlStatment = "update set name = '$department' from coursejdbc.department where id = '$id'";
+    $department = strtoupper($_GET['department']);
+    echo "AQUI ".$department;
 
-    $sqlStatment = $conn->query('select Id, Name as Departamento from coursejdbc.department where id = "$id"');
+    $sqlStatment = "update vendas.department set name = '$department' where id = $id";
+    //echo $sqlStatment;
+    //$sqlStatment = "select Id, Name as Departamento from vendas.department where id = '$id'";
+    $result = $conn->query($sqlStatment);
+    //var_dump($result);
+    //$all = $result->fetchAll();
+    //echo $result;
 
-    if (1 == 1) { //count($sqlStatment)
-      //echo "<br> Registro atualizado com sucesso!!!";
+    /*
+     $sqlStatment = "update set name = '$department' from vendas.department where id = '$id'";
+     $prepare = $conn->prepare($sqlStatment)
+     $prepape = bindValue(":id", $id, PDO::PARAM_INT);
+     //$prepape = bindParam(":id", $id);
+     $count = $prepape.execute();
+     $result = $prepare->fetch(PDO::FECH_ASSOC);
+     //print_r($result);
+     echo "$count linhas afetadas";  
+    */
 
-      //$row = $sqlStatment->fetch();
-      $row = $sqlStatment->fetch(PDO::FETCH_ASSOC);
-      echo $row;
-      $department = $row['Departamento'];
+    if ($department != "") { //count($sqlStatment)
+      if ($conn->query($sqlStatment)) {
+          //$department = $row['Departamento'];
 
-      $_SESSION['message']  = 'Registro atualizado com sucesso!!!';
-      $_SESSION['msg_type'] = 'warning';
+        $_SESSION['message']  = 'Registro atualizado com sucesso!!!';
+        $_SESSION['msg_type'] = 'warning';
 
-      //header('location: index.php');
+        header('location: index.php');
+      }
     }
     //$conn = NULL;
   }
@@ -67,7 +83,7 @@ try {
   if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
 
-    $sqlStatment = "delete from coursejdbc.department where id = '$id'";
+    $sqlStatment = "delete from vendas.department where id = $id";
     if ($conn->query($sqlStatment)) {
       //echo "<br> Registro excluído com sucesso!!!";
 
@@ -75,6 +91,7 @@ try {
       $_SESSION['msg_type'] = 'danger';
 
       header('location: index.php');
+      exit;
     }
     //$conn = NULL;
   }

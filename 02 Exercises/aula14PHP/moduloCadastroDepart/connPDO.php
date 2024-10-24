@@ -3,7 +3,7 @@
 $bd   = "dbname=vendas";
 $host = "mysql:host=localhost:3306" . $bd;
 $user = "root";
-$pwd  = "1234";
+$pwd  = "";
 
 try {
   $conn = new PDO($host, $user, $pwd);

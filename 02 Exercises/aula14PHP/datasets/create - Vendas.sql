@@ -1,6 +1,6 @@
-create databse vendas2;
+create database vendas;
 
-use vendas2; 
+use vendas; 
 
 SET autocommit=0;
 
