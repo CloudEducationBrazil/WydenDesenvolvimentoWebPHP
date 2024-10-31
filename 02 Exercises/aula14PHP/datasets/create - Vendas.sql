@@ -20,6 +20,12 @@ INSERT INTO department(name) VALUES ('Comercial');
 INSERT INTO department(name) VALUES ('Desenvolvimento');
 INSERT INTO department(name) VALUES ('Financeiro');
 
+# SQL SERVER
+#CREATE TABLE department (
+#    id INT IDENTITY(1,1) PRIMARY KEY,
+#    name NVARCHAR(255) NOT NULL
+#);
+
 # alter table tb_sales add constraint FKSales_Sellers foreign key (seller_id) references tb_sellers;
  alter table tb_sales add constraint fkSalesSellers foreign key (seller_id) references tb_sellers(id);
 
