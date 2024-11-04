@@ -9,7 +9,7 @@
                        para melhorar a segurança e a usabilidade.
 
 Nota: Para cadastrar agora chamar a rota
-http://localhost/crudmvc/app/views/departamento/create.php
+http://localhost/04 PHP/08 crudMVCPHP/app/views/departamento/create.php
 -->
 
 <?php
